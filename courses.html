@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/output.css" />
+    <title>OS Concepts</title>
+  </head>
+  <body class="font-roboto bg-white bg-no-repeat bg-center bg-fixed bg-cover">
+    <header class="sticky">
+      <nav
+        id="first-nav"
+        class="bg-[#031f42] font-roboto text-white py-4 hidden lg:block"
+      >
+        <div class="container flex items-center justify-between mx-auto">
+          <div class="flex gap-8 font-semibold">
+            <p>
+              <i
+                style="color: #ffc221; margin-right: 0.5rem"
+                class="fa-solid fa-phone"
+              ></i
+              >+234 806 354 6710
+            </p>
+            <div class="h-5 border-l-2 border-gray-300"></div>
+            <p>
+              <i
+                style="color: #ffc221; margin-right: 0.5rem"
+                class="fa-regular fa-envelope"
+              ></i>
+              info@osconcepts.com
+            </p>
+          </div>
+          <div class="flex items-center gap-12">
+            <div class="flex gap-8">
+              <p>Log in</p>
+              <p>Register</p>
+            </div>
+            <div class="flex flex-row gap-4">
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <nav id="second-nav" class="shadow-md mx-auto">
+        <div>
+          <div
+            class="flex justify-between items-center container mx-auto py-3 px-4 lg:py-8"
+          >
+            <img
+              class="h-8"
+              src="/assets/images/os-concepts-logo.png"
+              alt=""
+            />
+            <div class="flex items-center gap-12">
+              <div class="hidden lg:flex flex-row lg:gap-12">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+
+                <a href="">About us</a>
+                <a href="">Pricing</a>
+                <a href="">Courses</a>
+                <a href="">Blog</a>
+                <a href="">Contact us</a>
+              </div>
+
+              <div class="h-10 border-l-2 border-gray-300"></div>
+
+              <div class="hidden items-center gap-4 md:flex lg:flex">
+                <a class="text-gray-400 font-medium" href="">Log In</a>
+                <a
+                  class="bg-blue-50 text-sky-500 font-medium py-3 px-7 rounded-lg"
+                  href=""
+                  >Sign Up</a
+                >
+              </div>
+              <div class="flex gap-5">
+                <div class="lg:hidden">
+                  <i
+                    id="toggleIcon2"
+                    class="fa-solid fa-grip-lines text-3xl cursor-pointer"
+                  ></i>
+                </div>
+                <div class="lg:hidden md:hidden">
+                  <i
+                    id="toggleIcon1"
+                    class="fa-solid fa-ellipsis text-3xl cursor-pointer"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- First mobile nav that will show when toggled -->
+      <div
+        id="toggleBox1"
+        class="bg-black bg-opacity-75 rounded-md absolute top-14 hidden left-1/2 -ml-[46%] md:hidden lg:hidden w-11/12 p-4 shadow-md flex justify-center z-50"
+      >
+        <button class="bg-blue-500 text-white py-2 px-4 mr-2 rounded">
+          Sign Up
+        </button>
+        <button class="bg-gray-500 text-white py-2 px-4 rounded">Login</button>
+      </div>
+
+      <!-- Second mobile nav that will be toggled on the two bars icon -->
+      <div id="toggleBox2" class="hidden absolute inset-0 z-50 h-screen">
+        <div class="h-full">
+          <div class="bg-white flex items-center py-4 px-4 justify-between ">
+            <img
+              class="h-8"
+              src="/assets/images/os-concepts-logo.png"
+              alt=""
+            />
+            <i
+              id="closeIcon2"
+              class="fa-solid fa-xmark text-2xl cursor-pointer"
+            ></i>
+          </div>
+          <!-- the links -->
+          <div class="bg-[#623d83] p-8">
+            <ul class="flex flex-col gap-8">
+              <li class="space-y-3">
+                <a href="">About</a>
+                <hr />
+              </li>
+              <li class="space-y-3">
+                <a href="">Pricing</a>
+                <hr />
+              </li>
+              <li class="space-y-3">
+                <a href="">Courses</a>
+                <hr />
+              </li class="space-y-3">
+              <li class="space-y-3">
+                <a href="">Blog</a>
+                <hr />
+              </li>
+              <li class="space-y-3">
+                <a href="">Contact us</a>
+                <hr />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="font-roboto bg-[#ececec] lg:px-40">
+        <div
+          class="container mx-auto py-20 px-6 md:flex lg:flex items-center justify-between"
+        >
+          <div class="space-y-8 flex-1">
+            <div>
+              <p class="text-[#007aff] lg:text-xl font-semibold mb-2">
+                Acquire Digital Skills
+              </p>
+              <p class="text-4xl lg:text-5xl font-semibold">OS Concepts</p>
+            </div>
+            <div class="space-y-10">
+              <p class="font-medium lg:w-2/3 lg:text-3xl">
+                Innovation Grant Facility Digital Skills Development Project
+                (IGF-DSDP)
+              </p>
+              <div>
+                <a
+                  href=""
+                  class="bg-[#007aff] hover:bg-[#0061c8] rounded-md font-bold text-xl text-white px-14 py-4"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <img
+              class="mx-auto"
+              src="/assets/images/os-concepts-homepage.png"
+              alt=""
+            />
+          </div>
+          <img
+            class="absolute -z-30"
+            src="/Frontend/assets/images/edumall-shape-grid-dots.png"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!-- New Certificates and New Collection -->
+      <section
+        id="certificates"
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 px-6 gap-5 lg:px-40 py-10"
+      >
+        <div class="w-full bg-[#f2f2f2] space-y-5 p-10 rounded-lg shadow-md">
+          <p class="text-[#0071dc] font-semibold">New Certificates</p>
+          <p class="font-semibold text-gray-600 text-xl w-2/3">
+            Online Courses from OS Concepts
+          </p>
+          <div>
+            <a
+              href=""
+              class="bg-[#0071dc] text-white font-semibold py-2 px-5 rounded-md text-sm"
+              >Find out more</a
+            >
+          </div>
+        </div>
+
+        <div class="w-full bg-blue-50 space-y-5 p-10 rounded-lg shadow-md">
+          <p class="text-[#0071dc] font-semibold">New Collection</p>
+          <p class="font-semibold text-gray-600 text-xl w-2/3">
+            Master New Tech Skills
+          </p>
+          <div>
+            <a
+              href=""
+              class="bg-[#0071dc] text-white font-semibold py-2 px-5 rounded-md text-sm"
+              >View Courses</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Explore Featured Courses -->
+      <section class="container md:w-3/4 lg:w-2/4 mx-auto px-6 lg:px-40 py-10">
+        <h1 class="mb-20 text-2xl font-semibold text-gray-700">
+          Explore Featured Courses
+        </h1>
+        <div class="">
+          <div>
+            <div
+              class="bg-blue-50 p-10 flex flex-col gap-8 items-center lg:flex-row lg:items-center lg:justify-between"
+            >
+              <p class="text-center">
+                <span class="text-blue-600">Let Us Help</span> <br />
+                Finding Your
+                <span class="font-semibold">right</span>
+                <span class="font-semibold">Courses</span>
+              </p>
+
+              <div
+                class="bg-[#ffc221] px-8 py-3 font-semibold rounded-md text-sm"
+              >
+                <a href="">Get started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Browse Subjects -->
+      <section
+        class="container mx-auto px-6 lg:px-40 py-10 flex flex-col lg:flex-row gap-10 justify-between"
+      >
+        <div><h1 class="text-2xl font-medium">Browse Subjects</h1></div>
+        <div>
+          <a
+            href=""
+            class="bg-gray-100 rounded-md py-3 px-5 text-blue-500 font-semibold text-sm"
+            >View all Courses</a
+          >
+        </div>
+      </section>
+
+      <!-- Top Brands we partner with -->
+      <section class="container mx-auto px-6 lg:px-40 py-20">
+        <div class="flex flex-col lg:flex-row gap-10 justify-between">
+          <div>
+            <h1 class="text-2xl font-medium">Top Brands we partner with</h1>
+          </div>
+          <div>
+            <a
+              href=""
+              class="bg-gray-100 rounded-md py-3 px-5 text-blue-500 font-semibold text-sm"
+              >View all partners</a
+            >
+          </div>
+        </div>
+        <div class="py-20 overflow-hidden relative">
+          <div class="flex space-x-10 animate-marquee whitespace-nowrap">
+            <img
+              class="mr-4"
+              src="/assets/images/img_GLOBAL_Knowledge-uk-150x70.gif"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_kpmg.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_quanteg.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_rightCLIK.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_firs.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_galaxy.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_keystone-bank.bmp"
+              alt=""
+            />
+
+            <!-- Repeating the images -->
+
+            <img
+              class="mr-4"
+              src="/assets/images/img_GLOBAL_Knowledge-uk-150x70.gif"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_kpmg.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_quanteg.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_rightCLIK.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_firs.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_galaxy.bmp"
+              alt=""
+            />
+            <img
+              class="mr-4"
+              src="/assets/images/img_keystone-bank.bmp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- OS Concepts -->
+      <section class="container mx-auto px-6 py-20 lg:px-40">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div class="flex flex-col items-center text-center space-y-5">
+            <img src="/assets/images/image-box-01.png" alt="" />
+            <h2>Learning and mentorship with tactical skills</h2>
+            <p class="text-gray-600 text-sm">
+              Learn soft skills that will help you to think, grow and build your
+              professional brand.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-5">
+            <img src="/assets/images/image-box-02.png" alt="" />
+            <h2>Gain digital skills that will enhance your employability</h2>
+            <p class="text-gray-600 text-sm">
+              With the skills and mentorship, you will obtain at OS Concepts,
+              you will be able to secure that top paying digital job.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-5">
+            <img src="/assets/images/image-box-03.png" alt="" />
+            <h2>Get Ready for The Next Career</h2>
+            <p class="text-gray-600 text-sm">
+              With high demands in mastering new skills in IT, analytics and
+              more
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center text-center space-y-5">
+            <img src="/assets/images/image-box-04.png" alt="" />
+            <h2>Learn from industry experts and thoughtful leaders</h2>
+            <p class="text-gray-600 text-sm">
+              Learn directly from industry experts who have a wealth of digital
+              industry knowledge between them.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#252525] py-4 text-center text-gray-500">
+      <p class="tracking-wide">
+        © Copyrights 2023 <span class="font-semibold">OS Concepts</span>. All
+        rights reserved.
+      </p>
+    </footer>
+    <script>
+      // JavaScript for ellipsis toggle functionality
+      const toggleIcon1 = document.getElementById("toggleIcon1");
+      const toggleBox1 = document.getElementById("toggleBox1");
+
+      toggleIcon1.addEventListener("click", () => {
+        toggleBox1.classList.toggle("hidden");
+      });
+
+      // Select elements
+      const toggleIcon2 = document.getElementById("toggleIcon2");
+      const closeIcon2 = document.getElementById("closeIcon2");
+      const toggleBox2 = document.getElementById("toggleBox2");
+
+      // Function to open the nav
+      toggleIcon2.addEventListener("click", () => {
+        toggleBox2.classList.remove("hidden"); // Show the nav
+        document.body.classList.add("overflow-hidden"); // Prevent scrolling
+      });
+
+      // Function to close the nav
+      closeIcon2.addEventListener("click", () => {
+        toggleBox2.classList.add("hidden"); // Hide the nav
+        document.body.classList.remove("overflow-hidden"); // Enable scrolling
+      });
+    </script>
+  </body>
+</html>
